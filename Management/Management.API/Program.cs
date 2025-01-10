@@ -1,4 +1,7 @@
 
+using Management.DAL.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace Management.API
 {
     public class Program
@@ -10,6 +13,9 @@ namespace Management.API
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDbContext<AppDbContext>(opt =>
+                opt.UseSqlServer(builder.Configuration.GetConnectionString("MsSQL"))); 
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

@@ -8,5 +8,7 @@ using System.Threading.Tasks;
 namespace Management.Core.Entities; 
 public class Topic : BaseEntity
 {
-
+    public string Name { get; set; }
+    public int AssignmentId { get; set; }   
+    public Assignment Assignment { get; set; } 
 }

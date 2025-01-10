@@ -1,4 +1,5 @@
-﻿using Management.Core.Entities.Basep;
+﻿using Management.Core.Entities;
+using Management.Core.Entities.Basep;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ public class Employee : BaseEntity
     public decimal Salary { get; set; }
     public int Age { get; set; }
     public DateTime BirthDate { get; set; } 
-    public 
-    
+    public int Position { get; set; }
+    public int AssignmentId { get; set; }
+    public Assignment Assignment { get; set; }
 }
